@@ -1,0 +1,28 @@
+.all-page{
+    margin-left: 28%;
+    margin-top: 125px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center; 
+}
+
+.btn-update{
+    float: left;
+    margin-left: 15%;
+    background-color: #362424;
+    color: white;
+    font-weight: lighter;
+    margin-top: 1%;
+    height: 100%;
+}
+
+.btn-delete{
+    float: left;
+    margin-left: 2%;
+    background-color: #362424;
+    color: white;
+    font-weight: lighter;
+    margin-top: 1%;
+    height: 100%;
+
+}

@@ -1,0 +1,47 @@
+<div class="allPage row">
+  <p class="page-info">Please wait a few seconds after choose photo..</p>
+     <div class="col-md-12">
+      <form #petForm="ngForm" (ngSubmit)="createPet(petForm)">
+        <div class="row col-md-6">
+          <div class="col-md-12">
+            <label class="textTitle" for="name">Pet Name</label>
+            <input ngModel #name="ngModel" name="name" type="text" class="form-control" id="name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle"  for="birth_year">Birth Year</label>
+            <input ngModel #birth_year="ngModel" name="birth_year" type="number" class="form-control" id="birth_year">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle" for="kind1">Kind:  </label>
+            <select class="kind-input" ngModel #kind="ngModel" class="select-kind" id="kind1" name="kind">
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+                <option value="bird">Bird</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+              <button class="btn btn-add" type="submit">Add!</button>
+            </div>
+        </div>
+       
+      </form>
+
+      <div class="form-group col-6 choose-photo">
+        <input type="file"
+        id="file"
+        #userPhoto
+        (change)="onFileSelected($event)"
+        name="image"
+        autocomplete="off"/>
+       </div>
+
+    </div>
+  </div>

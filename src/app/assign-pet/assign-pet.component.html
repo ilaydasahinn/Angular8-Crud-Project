@@ -1,0 +1,25 @@
+<div class="container all-page">
+    <div *ngIf="pets?.length > 0; else noPets">
+        <ul *ngFor="let pet of pets" class="list-group">
+            <div *ngIf="pet?.owner_id?.length == 0">
+                <li class="list-group-item">
+                    <img class="pet-img" src={{pet.imageUrl}}>
+                    <strong>  Name: </strong>
+                    <strong> {{pet.name}} - </strong>
+                    <strong>  Kind: </strong>
+                    <strong> {{pet.kind}} - </strong>
+                    <strong>  Birth Year:  </strong>
+                    <strong> {{pet.birth_year}}</strong>
+                </li>
+                <button class="btn-assign"  (click)="clickAssignPet(pet)">AssignThis</button>
+            </div>
+            
+        </ul>
+    </div>
+
+    <ng-template #noPets>
+        <h5 static>There is no pets to list!</h5>
+    </ng-template>
+    
+
+</div>

@@ -1,0 +1,36 @@
+<div class="row all-page">
+    <div class="col-12">
+      <form  (ngSubmit)="editOwner()" [formGroup]="ownerr">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle" for="name">Owner Name</label>
+            <input  name="name" type="text" class="form-control" id="name" formControlName="name" >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle" for="birth_year">Owner Surname</label>
+            <input  name="surname" type="text" class="form-control" id="surname" formControlName="surname">
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-update" type="submit">Update!</button>
+            </div>
+        </div>
+       
+      </form>
+
+      <div class="form-group choose-photo">
+        <input type="file"
+        id="file"
+        #userPhoto
+        (change)="onFileSelected($event)"
+        name="image"
+        autocomplete="off"
+        />
+       </div>
+       
+    </div>
+  </div>

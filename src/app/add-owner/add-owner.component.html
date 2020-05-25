@@ -1,0 +1,38 @@
+<p class="page-info">Please wait a few seconds after choose photo..</p>
+
+<div class="row all-page container col-md-12" >
+    <div class="col-md-4">
+      <form #ownerForm="ngForm" (ngSubmit)="createOwner(ownerForm)">
+        <div class="row">
+          <div class="col-md-12">
+            <label class="textTitle" for="name">Owner Name</label>
+            <input ngModel #name="ngModel" name="name" type="text" class="form-control" id="name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label class="textTitle" for="surname">Owner Surname</label>
+            <input ngModel #surname="ngModel" name="surname" type="text" class="form-control" id="surname">
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-add" type="submit">Add!</button>
+            </div>
+        </div>
+       
+      </form>
+
+      <div class="form-group choose-photo">
+        <input type="file"
+        id="file"
+        #userPhoto
+        (change)="onFileSelected($event)"
+        name="image"
+        autocomplete="off"
+        />
+       </div>
+
+    </div>
+  </div>

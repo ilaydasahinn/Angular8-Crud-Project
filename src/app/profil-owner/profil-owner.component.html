@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <img src={{this.oldName.imageUrl}}>
+    <h1>{{this.oldName.name }} {{this.oldName.surname}}</h1>
+    <br>
+    <h4>The owner's pets:</h4>
+    <div *ngIf="this.pets?.length > 0;">
+        <ul *ngFor="let pet of this.pets" class="list-group">
+            <li class="list-group-item">
+                <img class="pet-img" src={{pet.imageUrl}}>
+                <strong>  Name: </strong>
+                <strong> {{pet.name}} - </strong>
+                <strong>  Kind: </strong>
+                <strong> {{pet.kind}} - </strong>
+                <strong>  Birth Year:  </strong>
+                <strong> {{pet.birth_year}}</strong>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="row all-page">
+    <div class="col-12">
+    </div>
+  
+    <div class="col-12">
+      <form #adminForm="ngForm" (ngSubmit)="editAdmin(adminForm)">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="name">Admin First Name</label>
+            <input ngModel #firstname="ngModel" name="firstname" type="text" class="form-control" id="firstname" >
+            <label for="name">Admin Last Name</label>
+            <input ngModel #lastname="ngModel" name="lastname" type="text" class="form-control" id="lastname" >
+            <label for="name">Admin Email</label>
+            <input ngModel #email="ngModel" name="email" type="email" class="form-control" id="email" >
+            <label for="name">Admin Password</label>
+            <input ngModel #password="ngModel" name="password" type="text" class="form-control" id="password" >
+          </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-md-12">
+              <button class="btn-update" type="submit">Update</button>
+              <button class="btn-delete" type="submit" (click)="deleteAdmin()">Delete Admin</button>
+            </div>
+        </div>
+       
+      </form>
+    </div>
+  </div>

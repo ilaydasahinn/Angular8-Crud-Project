@@ -1,0 +1,26 @@
+.allPage{
+    margin-left: 28%;
+    margin-top: 125px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center; 
+  }
+
+.textTitle{
+    color: #362424;
+    margin-top: 3%;
+}
+
+.btn-add{
+    background-color: #362424;
+    color: white;
+    width: 28%;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+.choose-photo{
+    margin-top: 3%;
+    margin-left: 8%;
+}

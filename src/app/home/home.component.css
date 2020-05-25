@@ -1,0 +1,124 @@
+
+.homeTag{
+    text-align: center ;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+
+.userInfo{
+    float: left;
+    font-size: 20px;
+}
+
+.login{
+    float: right;
+    margin-right: 30%;
+    margin-top: 10px;
+    border-width: 3px;
+    background-color: #362424;
+    color: white;
+    width: 12%;
+    font-weight: lighter;
+    font-size: 20px;
+
+}
+.register{
+    margin-top: 10px;
+    border-width: 3px;
+    margin-left: 30%;
+    background-color: #362424;
+    color: white;
+    width: 12%;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.logout{
+    margin-top: 20px;
+    float: right;
+    background-color: #362424;
+    color: white;
+    width: 8%;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-right: 3%;
+}
+
+.editAdmin{
+    margin-top: 20px;
+    float: right;
+    background-color: #362424;
+    color: white;
+    width: 8%;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-right: 2%;
+}
+
+.homeInfo{
+    text-align: center;
+}
+
+.owner-list{
+    margin-top: 20px;
+}
+.list-group-item{
+    border-bottom: 1px #DFDFDF solid!important;
+    margin-bottom: 1px;
+}
+.pet-list{
+    margin-top: 20px;
+}
+.list-group-item:hover{
+    border-bottom: 1px #DFDFDF solid!important;
+    margin-bottom: 1px;
+    background-color:gray;
+    color: white;
+}
+.homeBar{
+    width: 100%;
+    margin-top: -50px;
+}
+
+.pug{
+    margin-top: 100px;
+    margin-left: 32%;
+    width: 35%;
+}
+
+.petText{
+    margin-top: 200px;
+    margin-left: 45%;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.btnListPets{
+    margin-top: 200px;
+    background-color: #362424;
+    color: white;
+    width: 8%;
+    height: 2%;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-left: 4.4%;
+}
+
+.ownerText{
+    margin-top: 25px;
+    margin-left: 35.8%;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.btnListOwners{
+    margin-top: 25px;
+    background-color: #362424;
+    color: white;
+    width: 8%;
+    height: 2%;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-left: 1%;
+}

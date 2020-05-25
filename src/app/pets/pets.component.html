@@ -1,0 +1,29 @@
+<div class="container ">
+    <div class="row">
+        <h5 class="list-info">List of Pets..</h5>
+        <button class="btn btnHome" (click)="goHome()">Home</button>
+        <button class="btn btnAddPet" (click)="addNewPet()">Add new pet!</button>
+    </div>
+    <div *ngIf="pets?.length > 0; else noPets">
+        <ul *ngFor="let pet of pets" class="list-group">
+            <div class=" col-12">
+            <li class="list-group-item">
+                <img class="pet-img" src={{pet.imageUrl}}>
+                <strong>  Name: </strong>
+                <strong> {{pet.name}} - </strong>
+                <strong>  Kind: </strong>
+                <strong> {{pet.kind}} - </strong>
+                <strong>  Birth Year:  </strong>
+                <strong> {{pet.birth_year}}</strong>
+            </li>
+            <button class="btn-delete" (click)="clickDelete(pet)">Delete</button>
+            <button class="btn-edit" (click)="clickEdit(pet)">Edit</button>
+            </div>
+        </ul>
+    </div>
+    
+    <ng-template #noPets>
+        <h5>There is no pets to list!</h5>
+    </ng-template>
+    
+</div>

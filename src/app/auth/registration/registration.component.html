@@ -1,0 +1,43 @@
+<div class=" allPage row ">
+    <div class="col-12">
+      <div class="row" *ngIf="authError">
+        <div class="col-6 alert alert-danger">
+          {{ authError?.message }}
+        </div>
+      </div>
+      <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+        <div class="row">
+          <div class="col-6">
+            <label class="textTitle" for="firstName">First name</label>
+            <input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control" id="firstName">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label class="textTitle" for="lastName">Last name</label>
+            <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control" id="lastName" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label class="textTitle" for="email">Email</label>
+            <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-6">
+              <label class="textTitle" for="password">Password</label>
+              <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-6">
+              <button class="btn btnSubmit" type="submit">Register</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,50 @@
+<div class="row all-page">
+    <div class="col-12">
+    </div>
+  
+    <div class="col-12">
+      <form  (ngSubmit)="editPet()" [formGroup]="pett">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle" for="name">Pet Name</label>
+            <input  name="name" type="text" class="form-control" id="name" formControlName="name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="textTitle" for="birth_year">Birth Year</label>
+            <input  name="birth_year" type="number" class="form-control" id="birth_year" formControlName="birth_year">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-12">
+            <label class="select-kind" for="kind1">Kind:</label>
+            <select  class="select-kind-option" id="kind1" name="kind" formControlName="kind">
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+                <option value="bird">Bird</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-update" type="submit">Update!</button>
+            </div>
+        </div>
+       
+      </form>
+
+      <div class="form-group choose-photo">
+        <input type="file"
+        id="file"
+        #userPhoto
+        (change)="onFileSelected($event)"
+        name="image"
+        autocomplete="off"
+        />
+       </div>
+       
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+<div class="homeBar">
+    <img *ngIf="!user" class="pug" src="assets/pug.png">
+        <h1 *ngIf="!user" class="homeTag">Welcome!</h1>
+        <p *ngIf="!user" class="homeInfo">Please log in to assign pets to owners...</p><br>
+</div>
+    
+<div class="row">
+    <p class="userInfo "*ngIf="user">Logged in as {{user?.email}}</p>
+    <div class="log-button col-12">
+    <button class="btn  register" *ngIf="!user" (click)="register()">Register</button>
+    <button class="btn  logout" *ngIf="user" (click)="logout()">Logout</button>
+    <button class="btn  login" *ngIf="!user" (click)="login()">Login</button>
+    <button class="btn editAdmin" *ngIf="user" (click)="admins()">Edit Admin</button>
+    <div class="row">
+    <p class="petText" *ngIf="user">Click to list pets..</p>
+    <button class="btn btnListPets" *ngIf="user" (click)="pets()">Pets</button>
+    </div>
+    <div class="row">
+    <p class="ownerText" *ngIf="user">Click to list owners..</p>
+    <button class="btn btnListOwners" *ngIf="user" (click)="owners()">Owners</button>
+    </div>
+    </div>
+</div>

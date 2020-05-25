@@ -1,0 +1,29 @@
+<div class="container ">
+    <div class="row">
+        <h5 class="list-info">List of Owners..</h5>
+        <button class="btn btnHome" (click)="goHome()">Home</button>
+        <button class="btn btnAddOwner" (click)="addNewOwner()">Add new owner!</button>
+    </div>
+    <div *ngIf="owners?.length > 0; else noOwners">
+        <ul *ngFor="let owner of owners" class="list-group">
+            <li class="list-group-item" (click)="clickProfile(owner)">
+                <img class="owner-img" src={{owner.imageUrl}}>
+                <strong>  Name: </strong>
+                <strong>{{owner.name}} -</strong>
+                <strong>  Surname: </strong>
+                <strong>{{owner.surname}}</strong>
+
+            </li>
+            <div class="row">
+            <button class="btn-delete"  (click)="clickDelete(owner)">Delete</button>
+            <button class="btn-edit" (click)="clickEdit(owner)">Edit</button>
+            <button class="btn-addPet" (click)="clickAddPet(owner)">Add Pet</button>
+            </div>
+        </ul>
+    </div>
+    
+    <ng-template #noOwners>
+        <h5>There is no owners to list!</h5>
+    </ng-template>
+    
+</div>
